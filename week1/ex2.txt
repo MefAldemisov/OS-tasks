@@ -1,0 +1,13 @@
+./week1/
+cat ex1.txt 
+grep -rl gcc /usr/bin/ | sort -r > ex1.txt
+grep -rl gcc /usr/bin/ > ex1.txt
+grep -rl gcc /usr/bin/
+grep -l gcc /usr/bin/
+grep -l gcc /usr/bin
+man grep 
+man ls
+man la
+mkdir week1
+./os_inno/
+mkdir os_inno
