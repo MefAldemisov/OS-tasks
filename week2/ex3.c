@@ -4,6 +4,13 @@
 * Description: Program, that prints right-side-up trinagle
 * of height n and width 2n-1
 * (n - command line parameter)
+*
+* Command line Parameters:
+* - height of the figure
+* - type of the figure:
+* 	0) square
+* 	1) right triangle
+* 	2) right side triangle (ex3)
 */
 
 #include<stdio.h>
@@ -66,7 +73,7 @@ int main(int argc, char * argv[]){
 		return 0;
 	}
 
-	if (flag < 0 || flag > 3){
+	if (flag < 0 || flag > 2){
 		printf("Flag has incorrect value, it should be in range [0, 2]");
 		return 0;
 	}
