@@ -3,7 +3,7 @@
 ### Bash and recup of C
 
 1. Output of the search command (combination of sort, grep and cd)
-'''grep -rl gcc /usr/bin/ | sort -r > ex1.txt'''
+`grep -rl gcc /usr/bin/ | sort -r > ex1.txt`
 2. Output for the history of the las commands in teminal
 3. Simple bash script
 4. "Hello world" in C
