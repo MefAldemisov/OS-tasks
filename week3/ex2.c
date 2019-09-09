@@ -18,18 +18,29 @@ void swap(int* first, int* second){
     *second = temp;
 }
 
-void bubble_sort(int* array, int length) {
+int is_greater(int a, int b){
+    /** Returns if the first value greater then the second*/
+    return a > b;
+}
+
+int is_less(int a, int b){
+    /** Returns if the first value is less then the second*/
+    return a < b;
+}
+
+void bubble_sort(int* array, int length, int (*comparator) (int, int)) {
     /**
      * Required function.
      * Input parameter 'length' is a length of the input array.
      * It is required due to the fact, 
      * that we can't find out amount of elements in the array
      * in different way.
+     * Comaparator - function pointer.
     */
 
    for(int i=0; i<length; i++){
        for(int j=0; j < length-i-1; j++){
-           if (array[j] > array[j+1])
+           if (comparator(array[j], array[j+1]))
                swap(&array[j], &array[j+1]);
        }
    }
@@ -77,7 +88,7 @@ int main(){
     int length, *array;
     get_input(&length, &array);
     // print_array(array, length);
-    bubble_sort(array, length);
+    bubble_sort(array, length, is_greater);
     // check(array, 5);
     print_array(array, length);
     free(array);
