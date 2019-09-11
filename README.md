@@ -25,3 +25,14 @@
 4. Quicksort
 5. Doubly linked list
 
+## week4
+### Threads and processes: fork() and system() commands
+
+1. Calling of `fork()` method with `getpid()` parent identifier
+
++ bash script to run it 10 times
+
+2. Visualisation of forking - use `pstree $!` in bush shell after running to see the tree (long program)
+
+3. Utilisation of `system()` command
+4. Better utilization of `system()` function 

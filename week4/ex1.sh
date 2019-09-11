@@ -1,7 +1,7 @@
 #!/bin/bash
  
-count=10
-i=0
+count=10 # amount of execution steps
+i=0 # loop variable
  
 # while loop
 while [ $i -lt $count ]; do
