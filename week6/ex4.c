@@ -1,3 +1,9 @@
+/*
+* Author: Alina Bogdanova BS18-04
+* Date: 25.09.19
+* Description: a program that declares signal
+* handlers for SIGKILL, SIGSTOP and SIGUSR1
+*/
 #include<stdlib.h>
 #include<stdio.h>
 #include<signal.h> 
@@ -39,6 +45,6 @@ int main(){
 OUTPUT:
 >> kill -SIGUSR1 15501
 SIGUSR1 cauched
-Job 1, './ex4&' has ended
+Job 1, './ex4&' has ended 
 >>
 */

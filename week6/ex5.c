@@ -1,3 +1,12 @@
+/*
+* Author: Alina Bogdanova BS18-04
+* Date: 25.09.19
+* Description: a program that forks a child
+* process, waits for 10 seconds and then
+* sends a SIGTERM signal to the child
+* Child process runs an infinite loop
+* and print “I’m alive” every second
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h> 

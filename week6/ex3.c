@@ -1,3 +1,10 @@
+/*
+* Author: Alina Bogdanova BS18-04
+* Date: 25.09.19
+* Description: a program that a program that 
+* intercepts SIGINT signal (Ctrl+C) and notifies user
+*/
+
 #include<stdlib.h>
 #include<stdio.h>
 #include<signal.h> 

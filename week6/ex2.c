@@ -1,3 +1,13 @@
+/*
+* Author: Alina Bogdanova BS18-04
+* Date: 25.09.19
+* Description: a program that creates a pipe. 
+* There are two processes (fork) – one should pass some
+* text, the other one read it.
+* Text is transfered from the first string to
+* another one using the pipe
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include <unistd.h> 

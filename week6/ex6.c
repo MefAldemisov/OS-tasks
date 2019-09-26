@@ -1,3 +1,14 @@
+/*
+* Author: Alina Bogdanova BS18-04
+* Date: 25.09.19
+* Description: a program that forks two child processes:
+* After forking the second child, main process sends
+* its (2nd child’s) pid to the first child by pipe
+* Then it waits for state changes in second child
+* First child waits a couple of seconds and send
+* SIGSTOP to the second child
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<signal.h>
@@ -5,8 +16,6 @@
 #include<sys/wait.h>
 
 #define BUFF_SIZE 4
-
-// int counter=0;
 
 void catch_stop(int i){
 
@@ -57,21 +66,20 @@ void root_proces(int processes_1, int pid_second){
 
 int main(){
 
-	int pids[3], pid;
+	int pid_main, pid;
 	int processes[2];	
 	if(pipe(processes) < 0){
 		return(0);
 	}
-	pids[0] = getpid();
+	pid_main = getpid();
 	pid=fork();
-	if(pids[0]!=getpid()){
-		pids[1] = getpid();
+	if(pid_main!=getpid()){
 		// child 1 process
 		first_process(processes[0]);
 	}else{
 		// parent
 		pid=fork();
-		if(pids[0]!=getpid()){
+		if(pid_main!=getpid()){
 			// child 2 process
 			second_process();
 		}else{
@@ -84,19 +92,16 @@ int main(){
 
 /*
 OUTPUT:
-ROOT: write pid_2 (8962)
-ROOT: (my pid is 8960) pid_2 written. Wait.
-FIRST: (I'm 8961) Wait for pid_2 from
-FIRST: pid_2 recieved, it is 8962. Kill it.
-I'm second process (8962)! I'm active!
-I'm second process (8962)! I'm active!
-I'm second process (8962)! I'm active!
-I'm second process (8962)! I'm active!
-I'm second process (8962)! I'm active!
-I'm second process (8962)! I'm active!
-I'm second process (8962)! I'm active!
-I'm second process (8962)! I'm active!
+ROOT: write pid_2 (9829)
+ROOT: (my pid is 9827) pid_2 written. Wait.
+FIRST: (I'm 9828) Wait for pid_2 from
+FIRST: pid_2 recieved, it is 9829. Kill it.
+I'm second process (9829)! I'm active!
+I'm second process (9829)! I'm active!
+I'm second process (9829)! I'm active!
+I'm second process (9829)! I'm active!
 FIRST: killed
 ROOT: I'm done
+I'm second process (9829)! I'm active!
 SECOND: I didn't want to die!!!	NO!!!...
 */
