@@ -20,7 +20,6 @@ int count = INIT_VALUE;
 int can_add = 1;
 int can_sub = 1;
 
-
 void *increment_count() {
     while (1) {
         count++;
