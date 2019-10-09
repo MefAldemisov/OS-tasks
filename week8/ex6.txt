@@ -1,0 +1,8 @@
+A machine has 16-bit virtual addresses. Pages are 8 KB. How many entries are needed for a single-level linear page table? 
+
+2^16 bits - size of all virtual memory
+2^13 = 8KB - size of 1 page
+=> 2^16/2^13 = 2^3 = 8 - amount of pages in the system
+Out page tble is a single-level and linear. It meas, amount of pages is equal to the amount of entries in the page table
+
+Answer: 8

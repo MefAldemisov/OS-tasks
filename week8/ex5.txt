@@ -1,0 +1,5 @@
+What is the difference between a physical and a virtual address?
+
+Virtual adress - adress, allocated with the use of paging. Page - part of virtual memory with a fixed size. Page can be loaded on not in the physical memory (RAM), which size is less, then a size of virtual memory.
+
+Virtual address - addres in software (OS), physical address - locaion in hardware (e.g. RAM)
