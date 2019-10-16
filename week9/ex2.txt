@@ -1,0 +1,3 @@
+To increase hit ratio the same references should be puted in 'radius', equal to the amount of pages, we collect.
+To decrease it, we should put the same references at the distance greater then amont of pages, controlled by us.
+Increasing of the hit ratio id the same as decreasing of the miss ratio and vice versa.
