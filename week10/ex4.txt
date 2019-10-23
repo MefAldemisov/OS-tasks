@@ -1,0 +1,3 @@
+Inode: 5636366, files: ./tmp/link1 ./tmp/file1
+Inode: 5636367, files: ./tmp/link2 ./tmp/file2
+
