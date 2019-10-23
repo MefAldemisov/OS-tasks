@@ -1,0 +1,23 @@
+> link  ../week1/file.txt _ex2.txt
+> ls -i _ex2.txt 
+5247254 _ex2.txt
+> ../week1/
+> ls -i file.txt 
+5247254 file.txt
+> ../week10/
+> find ../week1/file.txt  -inum 5247254
+../week1/file.txt
+> find ../week1/file.txt  -inum 5247254 -exec rm {} \;
+> ls
+_ex1_1.txt  _ex1_2.txt  ex1.txt  _ex2.txt
+> ls -i _ex2.txt
+5247254 _ex2.txt
+> ../week1/
+> ls -i ex1.txt
+5244563 ex1.txt
+> ls 
+ex1.txt  ex2.txt  ex3.sh  ex4*  main.c
+
+Comments:
+- after the link command the file.txt and _ex2.txt have the same inode: 5247254
+- find command with -exec postfix removed the created link

@@ -103,5 +103,5 @@ Hit_ratio: 0.036000
 Miss_ratio: 0.964000
 100
 Hit_ratio: 0.036000
-Miss_ratio: 0.964000
+Miss_ratio: 0.964000	
 */

@@ -1,0 +1,16 @@
+Remove execute permission for everybody
+> chmod 666 ex3.txt
+Grant all permissions to owner and others (not group)
+> chmod u=rwx,o=rwx ex3.txt
+Make group permissions equal to user permissions
+> chmod g=u ex3.txt
+– What does 660 mean for ex3.txt?
+ owner can read and write to the file
+ group members can read and write to the file
+ user can don nothing
+– What does 775 mean for ex3.txt?
+ owner can read, execute and write to the file
+ group members can read, execute and write to the file
+ user can read and execute the file
+– What does 777 mean for ex3.txt? 
+ everyone can read write and execute the file
