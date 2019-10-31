@@ -54,3 +54,7 @@ int main() {
 	}
 	return 0;
 }
+
+/* Used, but understood
+https://stackoverflow.com/questions/26259421/use-mmap-in-c-to-write-into-memory
+*/
