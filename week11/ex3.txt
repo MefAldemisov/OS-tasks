@@ -1,0 +1,22 @@
+CODE:
+	printf("Hello");
+	fork();
+	printf("\n");
+OUTPUT:
+Hello
+Hello
+_______________
+CODE:
+	printf("Hello\n");
+	fork();
+	printf("\n");
+OUTPUT:
+Hello
+
+
+______________(2 empty lines)
+
+All printf's output to stdout.
+If we are breaking line, we make our buffer empty.
+In first case "Hello" is in the buffer of both processes,
+while in the second case it is empty.
